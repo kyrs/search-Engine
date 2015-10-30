@@ -1,0 +1,60 @@
+#search, 
+#submit {
+    float: left;
+}
+
+#search {
+    padding: 5px 9px;
+    height: 43px;
+    width: 480px;
+    border: 1px solid #a4c3ca;
+    font: normal 17px 'trebuchet MS', arial, helvetica;
+    background: #6EB7FF;
+    border-radius: 50px 3px 3px 50px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25) inset, 0 1px 0 rgba(255, 255, 255, 1);            
+    text-align: center;
+    margin-left: 20%;
+    
+}
+
+/* ----------------------- */
+
+#submit
+{       
+    background-color: #FF471A;
+    background-image: linear-gradient(#FF471A, #FF471C);
+    border-radius: 3px 50px 50px 3px;    
+    border-width: 1px;
+    border-style: solid;
+    border-color: #7eba7c #578e57 #447d43;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 
+                0 1px 0 rgba(255, 255, 255, 0.3) inset;
+    height: 45px;
+    margin: 0 0 0 10px;
+    padding: 0;
+    width: 90px;
+    cursor: pointer;
+    font: bold 17px Arial, Helvetica;
+    color: #23441e;    
+    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+}
+
+#submit:hover {       
+    background-color: #FF471C;
+    background-image: linear-gradient(#FF471C, #FF471C);
+}   
+
+#submit:active {       
+    background: #95d788;
+    outline: none;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;        
+}
+
+#submit::-moz-focus-inner {
+       border: 0;  /* Small centering fix for Firefox */
+}
+
+
+hr{
+    max-width: 29%;
+}
