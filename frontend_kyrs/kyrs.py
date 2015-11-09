@@ -2,8 +2,22 @@ from flask import Flask,request
 from flask import render_template
 from kyrselastic import query_dsl
 import unicodedata
-
+from werkzeug import secure_filename
+import os 
 app =Flask(__name__)
+
+
+# This is the path to the upload directory
+app.config['UPLOAD_FOLDER'] = 'uploads/'
+# These are the extension that we are accepting to be uploaded
+app.config['ALLOWED_EXTENSIONS'] = set(['txt', 'pdf', 'png','doc','docx'])
+
+
+
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1] in app.config['ALLOWED_EXTENSIONS']
+
 
 @app.route('/')
 @app.route('/index')
@@ -29,6 +43,7 @@ def upload():
 
     # Get the name of the uploaded files
     uploaded_files = request.files.getlist("file[]")
+    print uploaded_files
     filenames = []
     for file in uploaded_files:
         # Check if the file is one of the allowed types/extensions
@@ -45,7 +60,7 @@ def upload():
     # Load an html page with a link to each uploaded file
     return "DONE !!!"
     #return render_template('upload.html', filenames=filenames)
-
+    print filenames
 
 if __name__ == "__main__":
     app.run(debug=True)
