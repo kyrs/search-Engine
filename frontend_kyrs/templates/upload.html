@@ -54,9 +54,6 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="/personal">Personal Search</a>
-                    </li>
-                    <li>
                         <a class="page-scroll" href="#about">About</a>
                     </li>
                     <li>
@@ -76,19 +73,33 @@
     <header>
         <div class="header-content">
             <div class="header-content-inner">
-                <h2>KYRS : A Personalized Search Engine </h2>
+                <h2> Personal Data Search </h2>
                 <hr>
-                <p >KYRS is a search engine which provide you the fuctionality of other big search engine on massive personal data. Apart from personal data KYRS utilizes the big buzz words like deep learning, Big Data and Machine Learning to make the existing search more Intelligent.
+                <p >
+                    KYRS has the functionality of searching huge personal data with features of big search engine. KYRS maintains the privacy of its user, as it automatically delete all the personal data of the user once the search is complete.
                  </p>
-                 <form id="searchbox" action="/query" method="Post" enctype="multipart/form-data" >
+                  <div class="fileUpload ">
+                 <form action="/upload" method="Post" enctype="multipart/form-data">
+                    <p><input id = "upload_text"type='file' name='file[]' multiple=''>
+                    <input id = "upload_button" type='submit' class="fileUpload"  value='upload'>
+                    </p>
+
+                </form>
+                </div>
+                <!-- <div class="fileUpload btn btn-primary">
+                <span>Upload</span>
+                <input type="file" class="upload" />
+                </div> -->
+
+               <!--   <form id="searchbox" action="" method="Post" enctype="multipart/form-data" >
                 <input id = "search"  name = "searched_text" type="text" placeholder="Type here" >
 
                 <input id = "submit" type="submit" value = "Search" text-align:center>
-                </form>
+                </form> -->
             </div>
         </div>
     </header>
-    
+<!--     
     <section class="bg-primary" id="about">
         <div class="container">
             <div class="row">
@@ -145,7 +156,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 <!-- 
     <section class="no-padding" id="portfolio">
         <div class="container-fluid">
@@ -246,7 +257,7 @@
 
      -->
 
-    <section id="contact">
+<!--     <section id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -266,7 +277,7 @@
                 </center>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- jQuery -->
     <script src="../static/js/jquery.js"></script>
